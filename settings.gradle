@@ -1,0 +1,23 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            // Maven repository for Persona Android SDK
+            url 'https://sdk.withpersona.com/android/releases'
+        }
+    }
+}
+rootProject.name = "TroveHealth"
+include ':app'
+include ':trovehealthcore'
