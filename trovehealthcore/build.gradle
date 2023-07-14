@@ -1,7 +1,20 @@
+buildscript  {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            // Maven repository for Persona Android SDK
+            url 'https://sdk.withpersona.com/android/releases'
+        }
+    }
+}
+
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
+
 
 repositories {
     google()
@@ -53,4 +66,40 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.7'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:4.9.1"
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    implementation "androidx.lifecycle:lifecycle-process:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+
+    implementation "com.google.code.gson:gson:2.10.1"
+
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.2"
+    implementation "io.reactivex.rxjava3:rxjava:3.1.5"
+
+    implementation "com.github.bumptech.glide:glide:4.15.1"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:2.9.0"
+
+    // Koin for Android
+    implementation "io.insert-koin:koin-core:3.3.2"  // Koin core features
+    implementation "io.insert-koin:koin-android:3.3.2" // Koin main features for Android (Scope,ViewModel ...)
+    implementation "io.insert-koin:koin-android-compat:3.3.2" // Koin Java Compatibility
+
+    kapt "com.github.bumptech.glide:compiler:4.15.1"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.6.1"
+
+    testImplementation "io.insert-koin:koin-test:3.1.4"
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
 }
+

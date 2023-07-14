@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TroveHealth</string>
+    <string name="d_o_b">Date of birth</string>
+
 </resources>

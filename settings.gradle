@@ -4,6 +4,7 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
         gradlePluginPortal()
     }
 }
@@ -12,9 +13,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
         maven {
-            // Maven repository for Persona Android SDK
+//            Maven repository for Persona Android SDK
             url 'https://sdk.withpersona.com/android/releases'
+
         }
     }
 }
